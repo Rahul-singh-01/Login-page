@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family:'Poppins', sans-serif;
+}
+
+section{
+    background: url(digi_art.jpg) no-repeat;
+    background-size: cover;
+
+    display: flex;                   /*contains all div*/
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;                      /*?*/
+    
+    width: 100%;
+}
+
+.form-box{
+    display: flex;
+    position: relative;
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(4px);
+    width: 400px;
+    height: 450px;
+    justify-content: center;              /*align flex*/
+    align-items: center;                                /*align content inside flex*/
+
+} 
+/*form box editing ends*/
+
+/*div-wise editing*/
+
+h2{
+    font-size: 32px;
+    text-align: center;         /*align particular text*/
+    color: ghostwhite;
+
+}
+
+/*input field edititng start*/
+
+.inputbox{                                /*input box div edit*/
+    position:relative;
+    margin: 30px 0;
+    width: 310px;
+    border-bottom: 2px solid white;
+    
+}
+
+.inputbox label{                               /*label edit*/
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    pointer-events: none;
+    color: white;
+    font-size: 1em;
+    transition: 0.5s;
+}
+
+input:focus ~ label,                /*use to add actio in field box while focusing*/
+input:valid ~ label{               /*input:focus ~ :valid{
+    top: -5px;               wrong due to this 'EMAIL' after entering text in field box...overlaps with text   or (label overlaps with text in field)*/
+            top: -5px;
+}
+
+/*input field edit*/
+
+.inputbox input{
+    width:100%;
+    height: 50px;
+    background: transparent;
+    border: none;
+    outline:none;
+    font-size: 1em;
+    padding: 10 35px 0 5px;
+    color: white;
+}
+
+
+/*icons editing*/
+
+.inputbox ion-icon{  
+    position: absolute;
+    right: 8px;
+    font-size: 1.2em;
+    top: 20px;
+    color: white;
+}
+
+
+/*remember and forget pass edit*/
+
+.forget{
+    display: flex;
+    justify-content: center;
+    font-size: 0.8em;
+    color: white;
+}
+
+.forget label{
+    margin-left: 3px;
+    
+}
+
+.forget  a{
+    margin-left: 18px;
+    color: white;
+    text-decoration: none;
+    
+}
+
+.forget a:hover{
+    text-decoration: underline;
+    
+}
+
+button{
+    width: 100%;
+    height: 35px;
+    font-size:1em;
+    font-family:'Poppins', sans-serif;
+    border-radius: 30px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-weight: bolder;
+    margin-top: 15px;
+    margin-bottom: 20px;
+}
+.register p,a{
+    color: white;
+    text-decoration: none;
+    text-align:center;
+    
+}
+
+.register a:hover{
+    text-decoration: underline;
+}
+
+.register a{
+    font-weight: bolder;
+}
+
+    </style>
+
+
+
+
+</head>
+<body>
+    <section>
+        <div class="form-box">  <!--main div-->
+            <div class="form-value">             <!--div conatining form-->
+                    <form action="">
+                        <h2>Login</h2>
+                        
+                        <div class="inputbox">              <!--email div-->
+                            <ion-icon name="mail-outline"></ion-icon> <input type="email" required> <label for="">Email</label>
+                        </div>                               <!--email div end-->
+
+                        <div class="inputbox">            <!--password div same class as email-->
+                            <ion-icon name="lock-closed-outline"></ion-icon> 
+                            <input type="password" required> 
+                            <label for="">Password</label>
+                        </div>  
+                        
+                        <div class="forget">       <!--password related div-->
+                            <input type="checkbox"> <label for="">Remember me.</label>
+                            <a href="" style="font-weight: bolder;">Forget Password?</a>
+                        </div>
+
+                        <button>
+                            Login
+                        </button>
+
+                        <div class="register">
+                            <p>Don't have an Account?&nbsp;&nbsp;<a href="#">Register</a></p>
+
+                        </div>
+                        
+
+                    
+
+                    </form>         <!--form end-->
+
+            </div>                 <!--form div end-->
+        </div>                     <!--main div end-->
+    </section>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+                    <!--icon pack-->
+
+
+</body>
+
+</html>
